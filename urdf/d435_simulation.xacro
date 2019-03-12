@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot name="robot_with_d435" xmlns:xacro="http://ros.org/wiki/xacro">
+    <link name="world"/>
+
+    <!-- Import macro for realsense-d435 camera-->
+    <xacro:include filename="$(find realsense_gazebo_plugin)/urdf/_d435.urdf.xacro"/>
+    <!-- Create camera instance -->
+    <xacro:sensor_d435 parent="world">
+        <origin xyz="0 0 1.0" rpy="0 0 0" />   
+    </xacro:sensor_d435>
+</robot>
